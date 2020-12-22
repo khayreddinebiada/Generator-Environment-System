@@ -13,8 +13,8 @@ namespace game.levels
         public LevelsAttrsGenerator levelsAttrsGenerator;
         public string pathTextLevelData;
 
-        public GenerateOn generateOn;
-        public Vector2 objectScale;
+        public GenerateOn generateOn = GenerateOn.OnZ;
+        public Vector2 objectScale = new Vector2(1, 1);
 #if UNITY_EDITOR
         public void MakeLevel()
         {
