@@ -11,7 +11,8 @@ public class LevelMaker : Editor
     SerializedProperty levelsAttrsGenerator;
     SerializedProperty pathTextLevelData;
     SerializedProperty objectScale;
-    SerializedProperty generateOn;
+    SerializedProperty generateOn; 
+    SerializedProperty from;
 
     // Start is called before the first frame update
     private void OnEnable ()
@@ -21,6 +22,7 @@ public class LevelMaker : Editor
         pathTextLevelData = serializedObject.FindProperty("pathTextLevelData");
         objectScale = serializedObject.FindProperty("objectScale");
         generateOn = serializedObject.FindProperty("generateOn");
+        from = serializedObject.FindProperty("from");
     }
 
     public override void OnInspectorGUI()
@@ -47,6 +49,7 @@ public class LevelMaker : Editor
         EditorGUILayout.PropertyField(pathTextLevelData);
         EditorGUILayout.PropertyField(objectScale);
         EditorGUILayout.PropertyField(generateOn);
+        EditorGUILayout.PropertyField(from);
 
         if (GUILayout.Button("Make Floors", GUILayout.Height(50)))
         {
