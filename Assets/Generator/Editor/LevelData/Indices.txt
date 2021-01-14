@@ -1,0 +1,5 @@
+'w' ---> Wall
+' ' ---> Empty
+'c' ---> Coin
+'a' ---> Enemy1
+'b' ---> Enemy2
